@@ -1,7 +1,25 @@
 fun main(args: Array<String>) {
     println("Hello World!")
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    var intput: String? = null
+    val size = 4
+    println("$intput -> ${mask(intput, size)}")
+
+    intput = ""
+    println("$intput -> ${mask(intput, size)}")
+
+    intput = "4en"
+    println("$intput -> ${mask(intput, size)}")
+
+    intput = "4eng"
+    println("$intput -> ${mask(intput, size)}")
+
+    intput = "4engineer.net"
+    println("$intput -> ${mask(intput, size)}")
+
+    intput = "1234-5678-9012-3456"
+    println("$intput -> ${mask(intput, size)}")
+
+    println("$intput -> ${rightMask(intput, size)}")
+
 }
