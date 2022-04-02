@@ -1,4 +1,6 @@
 import com.example.encouragement_of_kotlin.KotlinSample
+import com.example.encouragement_of_kotlin.User
+import java.time.LocalDate
 
 fun main(/*args: Array<String>*/) {
 //    println("Hello World!")
@@ -26,4 +28,9 @@ fun main(/*args: Array<String>*/) {
 
     val sample = KotlinSample()
     sample.example("ゴイチ")
+    sample.example2("ゴイチ", LocalDate.of(1980, 1, 1))
+    sample.example3(User("ゴイチ", 100))
+    sample.example4()
+    sample.example5("4engineer.net")
+    sample.example6(-1)
 }
