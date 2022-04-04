@@ -33,4 +33,10 @@ fun main(/*args: Array<String>*/) {
     sample.example4()
     sample.example5("4engineer.net")
     sample.example6(-1)
+    sample.example7()
+    sample.example8("Hello!!", "こん!")
+    sample.example9()
+    sample.example10("スマートキャストされた文字列です")
+    sample.example11()
+    sample.example12()
 }
