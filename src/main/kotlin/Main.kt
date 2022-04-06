@@ -1,5 +1,6 @@
 import com.example.encouragement_of_kotlin.KotlinSample
 import com.example.encouragement_of_kotlin.User
+import com.example.map_vs_flatmap.MapVsFlatMap
 import java.time.LocalDate
 
 fun main(/*args: Array<String>*/) {
@@ -26,17 +27,22 @@ fun main(/*args: Array<String>*/) {
 //
 //    println("$intput -> ${rightMask(intput, size)}")
 
-    val sample = KotlinSample()
-    sample.example("ゴイチ")
-    sample.example2("ゴイチ", LocalDate.of(1980, 1, 1))
-    sample.example3(User("ゴイチ", 100))
-    sample.example4()
-    sample.example5("4engineer.net")
-    sample.example6(-1)
-    sample.example7()
-    sample.example8("Hello!!", "こん!")
-    sample.example9()
-    sample.example10("スマートキャストされた文字列です")
-    sample.example11()
-    sample.example12()
+//    val sample = KotlinSample()
+//    sample.example("ゴイチ")
+//    sample.example2("ゴイチ", LocalDate.of(1980, 1, 1))
+//    sample.example3(User("ゴイチ", 100))
+//    sample.example4()
+//    sample.example5("4engineer.net")
+//    sample.example6(-1)
+//    sample.example7()
+//    sample.example8("Hello!!", "こん!")
+//    sample.example9()
+//    sample.example10("スマートキャストされた文字列です")
+//    sample.example11()
+//    sample.example12()
+
+    val mapVsFlatMap = MapVsFlatMap()
+    mapVsFlatMap.example()
+    mapVsFlatMap.example2()
+    mapVsFlatMap.example3()
 }
