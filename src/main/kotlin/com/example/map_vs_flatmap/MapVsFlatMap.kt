@@ -6,17 +6,20 @@ class MapVsFlatMap {
     fun example() {
         val list = listOf(1, 2, 3)
 
+        // map
         val convertedByMap = list
             .map { listOf(it, it) }
         println(convertedByMap)
         // [[1, 1], [2, 2], [3, 3]]
 
+        // map + flatten
         val convertedByMapFlatten = list
             .map { listOf(it, it) }
             .flatten()
         println(convertedByMapFlatten)
         // [1, 1, 2, 2, 3, 3]
 
+        // flatMap
         val convertedByFlatMap = list
             .flatMap { listOf(it, it) }
         println(convertedByFlatMap)
@@ -39,7 +42,7 @@ class MapVsFlatMap {
         val queryList = listOf("Java", "Kotlin", "駆け出しエンジニア")
 
         val convertedByFlatMap = queryList
-            .flatMap { callTwitterApi(it) }
+            .flatMap { callTwitterApi(it) } // Twitter APIを呼んでるつもり
         println(convertedByFlatMap)
         // [1, 2, 3, 4, 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
