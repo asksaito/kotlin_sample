@@ -1,12 +1,14 @@
 import com.example.aes_cipher.AesGcmCipher
 import com.example.encouragement_of_kotlin.KotlinSample
 import com.example.encouragement_of_kotlin.User
+import com.example.generatePrimes
 import com.example.map_vs_flatmap.MapVsFlatMap
+import com.example.primeFactorization
 import java.security.SecureRandom
 import java.time.LocalDate
 import java.util.*
 
-fun main(/*args: Array<String>*/) {
+fun main(args: Array<String>) {
 //    println("Hello World!")
 
 //    var intput: String? = null
@@ -49,6 +51,9 @@ fun main(/*args: Array<String>*/) {
 //    mapVsFlatMap.example2()
 //    mapVsFlatMap.example3()
 
+//    primeFactorization(args)
+    println(generatePrimes(120))
+    println(generatePrimes(1000000).size)
 
     val plainText = "This is a plain text."
     val keyBase64 = "XkbPC5uQWTF6UWFx/FeRjlZPaqQtQqRKLt6lbZsbQf4="
