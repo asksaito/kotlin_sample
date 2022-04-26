@@ -2,8 +2,11 @@ import com.example.aes_cipher.AesGcmCipher
 import com.example.encouragement_of_kotlin.KotlinSample
 import com.example.encouragement_of_kotlin.User
 import com.example.generatePrimes
+import com.example.kotlin_hash.*
 import com.example.map_vs_flatmap.MapVsFlatMap
 import com.example.primeFactorization
+import org.apache.commons.codec.binary.Hex
+import java.nio.charset.StandardCharsets
 import java.security.SecureRandom
 import java.time.LocalDate
 import java.util.*
@@ -52,22 +55,51 @@ fun main(args: Array<String>) {
 //    mapVsFlatMap.example3()
 
 //    primeFactorization(args)
-    println(generatePrimes(120))
-    println(generatePrimes(1000000).size)
+//    println(generatePrimes(120))
+//    println(generatePrimes(1000000).size)
 
-    val plainText = "This is a plain text."
-    val keyBase64 = "XkbPC5uQWTF6UWFx/FeRjlZPaqQtQqRKLt6lbZsbQf4="
+//    val plainText = "This is a plain text."
+//    val keyBase64 = "XkbPC5uQWTF6UWFx/FeRjlZPaqQtQqRKLt6lbZsbQf4="
+//
+//    // Generate Cipher instance
+//    val key = Base64.getDecoder().decode(keyBase64) // key as binary data
+//    val cipher = AesGcmCipher(key) // tagLen is default 128bit, no AAD
+//
+//    // Encryption
+//    val encryptData = cipher.encrypt(plainText.toByteArray())
+//
+//    // Decryption
+//    val decryptData = cipher.decrypt(encryptData)
+//
+//    println("Decrypt Text: ${String(decryptData)}")
+//    // Decrypt Text: This is a plain text.
 
-    // Generate Cipher instance
-    val key = Base64.getDecoder().decode(keyBase64) // key as binary data
-    val cipher = AesGcmCipher(key) // tagLen is default 128bit, no AAD
+//    val input = "This is a input text."
+    val sb = StringBuilder()
+    repeat(LongRange(1, 10000000L).count()) { sb.append(it) }
+    val input = sb.toString()
 
-    // Encryption
-    val encryptData = cipher.encrypt(plainText.toByteArray())
+    val sha3result = sha3(input.toByteArray(StandardCharsets.UTF_8))
+    val sha3CommonsResult = sha3Commons(input.toByteArray(StandardCharsets.UTF_8))
+    println("${Hex.encodeHexString(sha3result)}")
+    println("${Hex.encodeHexString(sha3CommonsResult)}")
+    println("Sha3 Result: " + (sha3result contentEquals sha3CommonsResult))
 
-    // Decryption
-    val decryptData = cipher.decrypt(encryptData)
+    val sha2result = sha256(input.toByteArray(StandardCharsets.UTF_8))
+    val sha2CommonsResult = sha256Commons(input.toByteArray(StandardCharsets.UTF_8))
+    println("${Hex.encodeHexString(sha2result)}")
+    println("${Hex.encodeHexString(sha2CommonsResult)}")
+    println("Sha2 Result: " + (sha2result contentEquals sha2CommonsResult))
 
-    println("Decrypt Text: ${String(decryptData)}")
-    // Decrypt Text: This is a plain text.
+    val sha1result = sha1(input.toByteArray(StandardCharsets.UTF_8))
+    val sha1CommonsResult = sha1Commons(input.toByteArray(StandardCharsets.UTF_8))
+    println("${Hex.encodeHexString(sha1result)}")
+    println("${Hex.encodeHexString(sha1CommonsResult)}")
+    println("Sha1 Result: " + (sha1result contentEquals sha1CommonsResult))
+
+    val md5result = md5(input.toByteArray(StandardCharsets.UTF_8))
+    val md5CommonsResult = md5Commons(input.toByteArray(StandardCharsets.UTF_8))
+    println("${Hex.encodeHexString(md5result)}")
+    println("${Hex.encodeHexString(md5CommonsResult)}")
+    println("md5 Result: " + (md5result contentEquals md5CommonsResult))
 }
