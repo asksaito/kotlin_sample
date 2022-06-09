@@ -5,6 +5,8 @@ import com.example.generatePrimes
 import com.example.kotlin_hash.*
 import com.example.map_vs_flatmap.MapVsFlatMap
 import com.example.primeFactorization
+import com.example.sort.sortSample
+import com.example.sort.sortSample2
 import org.apache.commons.codec.binary.Hex
 import java.nio.charset.StandardCharsets
 import java.security.SecureRandom
@@ -75,31 +77,34 @@ fun main(args: Array<String>) {
 //    // Decrypt Text: This is a plain text.
 
 //    val input = "This is a input text."
-    val sb = StringBuilder()
-    repeat(LongRange(1, 10000000L).count()) { sb.append(it) }
-    val input = sb.toString()
+//    val sb = StringBuilder()
+//    repeat(LongRange(1, 10000000L).count()) { sb.append(it) }
+//    val input = sb.toString()
+//
+//    val sha3result = sha3(input.toByteArray(StandardCharsets.UTF_8))
+//    val sha3CommonsResult = sha3Commons(input.toByteArray(StandardCharsets.UTF_8))
+//    println("${Hex.encodeHexString(sha3result)}")
+//    println("${Hex.encodeHexString(sha3CommonsResult)}")
+//    println("Sha3 Result: " + (sha3result contentEquals sha3CommonsResult))
+//
+//    val sha2result = sha256(input.toByteArray(StandardCharsets.UTF_8))
+//    val sha2CommonsResult = sha256Commons(input.toByteArray(StandardCharsets.UTF_8))
+//    println("${Hex.encodeHexString(sha2result)}")
+//    println("${Hex.encodeHexString(sha2CommonsResult)}")
+//    println("Sha2 Result: " + (sha2result contentEquals sha2CommonsResult))
+//
+//    val sha1result = sha1(input.toByteArray(StandardCharsets.UTF_8))
+//    val sha1CommonsResult = sha1Commons(input.toByteArray(StandardCharsets.UTF_8))
+//    println("${Hex.encodeHexString(sha1result)}")
+//    println("${Hex.encodeHexString(sha1CommonsResult)}")
+//    println("Sha1 Result: " + (sha1result contentEquals sha1CommonsResult))
+//
+//    val md5result = md5(input.toByteArray(StandardCharsets.UTF_8))
+//    val md5CommonsResult = md5Commons(input.toByteArray(StandardCharsets.UTF_8))
+//    println("${Hex.encodeHexString(md5result)}")
+//    println("${Hex.encodeHexString(md5CommonsResult)}")
+//    println("md5 Result: " + (md5result contentEquals md5CommonsResult))
 
-    val sha3result = sha3(input.toByteArray(StandardCharsets.UTF_8))
-    val sha3CommonsResult = sha3Commons(input.toByteArray(StandardCharsets.UTF_8))
-    println("${Hex.encodeHexString(sha3result)}")
-    println("${Hex.encodeHexString(sha3CommonsResult)}")
-    println("Sha3 Result: " + (sha3result contentEquals sha3CommonsResult))
-
-    val sha2result = sha256(input.toByteArray(StandardCharsets.UTF_8))
-    val sha2CommonsResult = sha256Commons(input.toByteArray(StandardCharsets.UTF_8))
-    println("${Hex.encodeHexString(sha2result)}")
-    println("${Hex.encodeHexString(sha2CommonsResult)}")
-    println("Sha2 Result: " + (sha2result contentEquals sha2CommonsResult))
-
-    val sha1result = sha1(input.toByteArray(StandardCharsets.UTF_8))
-    val sha1CommonsResult = sha1Commons(input.toByteArray(StandardCharsets.UTF_8))
-    println("${Hex.encodeHexString(sha1result)}")
-    println("${Hex.encodeHexString(sha1CommonsResult)}")
-    println("Sha1 Result: " + (sha1result contentEquals sha1CommonsResult))
-
-    val md5result = md5(input.toByteArray(StandardCharsets.UTF_8))
-    val md5CommonsResult = md5Commons(input.toByteArray(StandardCharsets.UTF_8))
-    println("${Hex.encodeHexString(md5result)}")
-    println("${Hex.encodeHexString(md5CommonsResult)}")
-    println("md5 Result: " + (md5result contentEquals md5CommonsResult))
+    sortSample()
+    sortSample2()
 }
