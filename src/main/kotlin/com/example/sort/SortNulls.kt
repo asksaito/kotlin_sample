@@ -3,9 +3,11 @@ package com.example.sort
 fun sortSample() {
     val list = listOf(5, null, 2, 4, 3, 1)
 
+    // nullを先頭にして、昇順でソート
     val naturalOrder = list.sortedWith(nullsFirst())
     println(naturalOrder)
 
+    // nullを最後尾にして、降順でソート
     val reverseOrder = list.sortedWith(nullsLast(reverseOrder()))
     println(reverseOrder)
 }
@@ -22,9 +24,11 @@ fun sortSample2() {
         Data(8, 1)
     )
 
+    // nullを先頭にして、昇順でソート
     val naturalOrder = list.sortedWith(compareBy(nullsFirst()) { it.order })
     println(naturalOrder)
 
+    // nullを最後尾にして、降順でソート
     val reverseOrder = list.sortedWith(compareBy(nullsLast(reverseOrder())) { it.order })
     println(reverseOrder)
 }
