@@ -17,6 +17,10 @@ dependencies {
     implementation("org.apache.commons:commons-lang3:3.12.0")
 // https://mvnrepository.com/artifact/commons-codec/commons-codec
     implementation("commons-codec:commons-codec:1.15")
+    // https://mvnrepository.com/artifact/commons-io/commons-io
+    implementation("commons-io:commons-io:2.11.0")
+    // https://mvnrepository.com/artifact/com.google.guava/guava
+    implementation("com.google.guava:guava:31.1-jre")
 
     testImplementation(kotlin("test"))
 }

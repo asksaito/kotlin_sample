@@ -1,4 +1,7 @@
 import com.example.aes_cipher.AesGcmCipher
+import com.example.csv.bomCsvParse
+import com.example.csv.readCsvAsList
+import com.example.csv.readCsvAsMap
 import com.example.encouragement_of_kotlin.KotlinSample
 import com.example.encouragement_of_kotlin.User
 import com.example.generatePrimes
@@ -104,7 +107,11 @@ fun main(args: Array<String>) {
 //    println("${Hex.encodeHexString(md5result)}")
 //    println("${Hex.encodeHexString(md5CommonsResult)}")
 //    println("md5 Result: " + (md5result contentEquals md5CommonsResult))
+//
+//    sortSample()
+//    sortSample2()
 
-    sortSample()
-    sortSample2()
+    readCsvAsList("D:\\temp\\test\\GameHardWithBOM.csv")
+    readCsvAsMap("D:\\temp\\test\\GameHardWithBOMWithHeader.csv", doubleQuote = true)
+
 }
