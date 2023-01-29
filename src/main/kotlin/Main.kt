@@ -7,6 +7,8 @@ import com.example.encouragement_of_kotlin.User
 import com.example.generatePrimes
 import com.example.kotlin_hash.*
 import com.example.map_vs_flatmap.MapVsFlatMap
+import com.example.object_declarations.CompanionObject
+import com.example.object_declarations.ObjectDeclaration
 import com.example.primeFactorization
 import com.example.sort.sortSample
 import com.example.sort.sortSample2
@@ -15,6 +17,9 @@ import java.nio.charset.StandardCharsets
 import java.security.SecureRandom
 import java.time.LocalDate
 import java.util.*
+
+//val objectDeclaration = ObjectDeclaration //objectはインスタンス生成できない
+val companionObject = CompanionObject()
 
 fun main(args: Array<String>) {
 //    println("Hello World!")
@@ -110,8 +115,12 @@ fun main(args: Array<String>) {
 //
 //    sortSample()
 //    sortSample2()
+//
+//    readCsvAsList("D:\\temp\\test\\GameHardWithBOM.csv")
+//    readCsvAsMap("D:\\temp\\test\\GameHardWithBOMWithHeader.csv", doubleQuote = true)
 
-    readCsvAsList("D:\\temp\\test\\GameHardWithBOM.csv")
-    readCsvAsMap("D:\\temp\\test\\GameHardWithBOMWithHeader.csv", doubleQuote = true)
+    Thread.sleep(3000) // wait for 3 seconds
+    ObjectDeclaration.print()
+    CompanionObject.print()
 
 }
