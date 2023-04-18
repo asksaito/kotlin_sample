@@ -39,7 +39,7 @@ class MapVsFlatMap {
     }
 
     fun example2() {
-        val queryList = listOf("Java", "Kotlin", "駆け出しエンジニア")
+        val queryList = listOf("Java", "Kotlin", "test")
 
         val convertedByFlatMap = queryList
             .flatMap { callTwitterApi(it) } // Twitter APIを呼んでるつもり
@@ -56,7 +56,7 @@ class MapVsFlatMap {
     }
 
     fun example3() {
-        val queryList = listOf("Java", "Kotlin", "駆け出しエンジニア")
+        val queryList = listOf("Java", "Kotlin", "test")
 
         val resultList = mutableListOf<Long>()
         for (query in queryList) {

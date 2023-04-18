@@ -98,11 +98,11 @@ class KotlinSample {
         // 全てデフォルト値を使うパターン
         defaultParam()
         // 第三引数を省略するパターン
-        defaultParam("ゴイチ", 42)
+        defaultParam("name", 42)
         // 第三引数のみ指定するパターン
         defaultParam(date = LocalDate.of(2022, 12, 31))
         // 記述の順番を変えることもできます
-        defaultParam(age = 42, date = LocalDate.of(2022, 12, 31), name = "ゴイチ")
+        defaultParam(age = 42, date = LocalDate.of(2022, 12, 31), name = "name")
     }
 
     private fun defaultParam(name: String = "デフォルト名", age: Int = 20, date: LocalDate = LocalDate.now()) {
